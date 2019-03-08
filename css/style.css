@@ -7,14 +7,23 @@ body{
 	font-size: 20px;
 	font-family: sans-serif;
 }
+#preloader {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background:#fff url('../images/loader_gif_1.gif') center no-repeat;
+	z-index: 9999;
+}
 .navigation {
 	z-index: 1;
 	position: fixed;
 	width: 100%;
-	background-color:transparent;
-	
+	top: 0;	
+	/*--box-shadow: 0 5px 5px 2px #bfbfbf;--*/
 }
-
+.bg-dark.scroll{
+	background-color: chocolate !important;
+}
 
 .image {
    padding-left:0;
@@ -26,12 +35,27 @@ body{
 	position: relative;
 	overflow: hidden;
 	 background-image:linear-gradient(rgba(10, 10, 10, 0.47),rgba(60, 15, 15, 0.44)), url(../images/download.jpg);
-	/*top: 60px;*/
-	
-	background-attachment: fixed;
-	
-	
-	
+	background-attachment: fixed;	
+}
+.image #arrow{
+	position: absolute;
+	font-size: 200%;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 95%;
+	color: white;
+	animation: bouncearrow 0.5s infinite;
+}
+@keyframes bouncearrow{
+	0%{
+		top: 93%;
+	}
+	50%{
+		top: 95%;
+	}
+	100%{
+		top: 93%;
+	}
 }
 /*----This is for the skewed image---*/
 .image:before{
@@ -185,3 +209,5 @@ border-right: 1px solid white;
 .base {
 	border-left: 1px solid white;
 }
+
+

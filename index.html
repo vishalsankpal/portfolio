@@ -5,52 +5,52 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>BIO</title>
+  <title>Vishal Sankpal | Portfolio</title>
   <meta name="description" content="ABOUT THE VISHAL SANKPAL(BIO)">
-  
-	
-	
+ 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 	
 </head>
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<body onload="pageready()" data-spy='scroll' dat-target='.navbar' data-offset='50'>
+   <div id="preloader"></div>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Aim</a>
+        <a class="nav-link" href="#aim">Aim</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Qualification</a>
+        <a class="nav-link" href="#qualifiction">Qualification</a>
       </li>
 		<li class="nav-item">
-        <a class="nav-link" href="#">Skills</a>
+        <a class="nav-link" href="#skills">Skills</a>
       </li>
 		<li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#about">About</a>
       </li>
     </ul>
   </div>
 </nav>
-	<section>
+	<section id="home">
 		<div class="container-fluid image">
 			<i class="fas fa-graduation-cap er-cap"></i>
 			<h1 class="name">VISHAL SANKPAL</h1>
 			<h3 class="degree">Bachelor of Engineering(Computer)</h3>
+			<span id="arrow">&#8675;</span>
 			
 		</div>
 	</section>
 
-<section>
+<section id="aim">
 	<div class="container">
 	<div class="objective">
 	 <h2 class="career"> career objective</h2>
@@ -61,7 +61,7 @@
 	</div>
 	
 	</section>
-	<section class="stat" id="stats">
+	<section class="stat" id="qualifiction">
 		<div class="content-box">
 		<br><br>
 			<div class="container qualifiction">
@@ -111,19 +111,40 @@
 	
 	
 	</section>
+	<section id="skills">
+	<!----skills--->
+	</section>
+	<section id="about">
+	<!--about-->
+	</section>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	
 	<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
 	<script type="application/javascript" src="js/jquery.waypoints.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script>
-   
-	   jQuery(document).ready(function($) {
+   /*--this jquery is for the counter up--*/
+	   $(document).ready(function($) {
             $('.counter').counterUp({
                 delay: 5,
-                time: 1000
+                time: 500
             });
         });
+	</script>
+	
+	<script>
+	  /*---this is for the preloader of the page---*/
+	    var preloader= document.getElementById('preloader');
+	    function pageready(){
+		  preloader.style.display="none";
+		}
+	</script>
+	
+	<script>
+	 $(window).scroll(function(){
+		 $('nav').toggleClass('scroll',
+							 $(this).scrollTop()>150);
+	 });
   </script>
 </body>
 </html>
