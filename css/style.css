@@ -34,7 +34,7 @@ body{
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	 background-image:linear-gradient(rgba(10, 10, 10, 0.47),rgba(60, 15, 15, 0.44)), url(../images/download.jpg);
+	 background-image:linear-gradient(rgba(10, 10, 10, 0.47),rgba(60, 15, 15, 0.44)), url(../images/bg.jpg);
 	background-attachment: fixed;	
 }
 .image #arrow{
